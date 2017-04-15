@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-07T06:19:06.000Z</updated>
+  <updated>2017-04-15T01:22:11.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>dream begin with self-discipline</title>
+    <link href="http://yoursite.com/2017/04/12/dream-begin-with-self-discipline/"/>
+    <id>http://yoursite.com/2017/04/12/dream-begin-with-self-discipline/</id>
+    <published>2017-04-12T02:18:16.000Z</published>
+    <updated>2017-04-15T01:22:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2017.4.15~2017.12.30共255天的短期目标：</p>
+<p>1、照顾YY</p>
+<p>2、学会奇迹的山+另一支岸部真明的曲子</p>
+<p>3、完成雅思王听力</p>
+<p>4、学习linux</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2017.4.15~2017.12.30共255天的短期目标：&lt;/p&gt;
+&lt;p&gt;1、照顾YY&lt;/p&gt;
+&lt;p&gt;2、学会奇迹的山+另一支岸部真明的曲子&lt;/p&gt;
+&lt;p&gt;3、完成雅思王听力&lt;/p&gt;
+&lt;p&gt;4、学习linux&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Life" scheme="http://yoursite.com/categories/Life/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>terminal can fly with socks</title>
@@ -56,14 +86,14 @@ function unsetproxy() {
     <link href="http://yoursite.com/2017/04/07/YSW-chapter3/"/>
     <id>http://yoursite.com/2017/04/07/YSW-chapter3/</id>
     <published>2017-04-07T00:24:50.000Z</published>
-    <updated>2017-04-07T06:18:46.000Z</updated>
+    <updated>2017-04-12T02:04:43.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><p>adminssion, cutlery, foyer, ointment, parcel, precision, preference, prescription, psychiatrist, psychologist, recipe, respondent, revision, scheme, syndicate, syrup ,steam, trailer, tribe</p>
+    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><p>admission, cutlery, foyer, ointment, parcel, precision, preference, prescription, psychiatrist, psychologist, recipe, respondent, revision, scheme, syndicate, syrup ,steam, trailer, tribe</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;p&gt;adminssion, cutlery, foyer, ointment, parcel, precisio
+      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;p&gt;admission, cutlery, foyer, ointment, parcel, precision
     
     </summary>
     
