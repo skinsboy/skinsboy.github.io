@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-15T01:29:11.000Z</updated>
+  <updated>2017-04-18T14:37:59.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>chapter 4.2</title>
+    <link href="http://yoursite.com/2017/04/18/chapter-4-2/"/>
+    <id>http://yoursite.com/2017/04/18/chapter-4-2/</id>
+    <published>2017-04-18T14:27:56.000Z</published>
+    <updated>2017-04-18T14:37:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><p>punctual, enthusiastic, influential, aggressive, compulsory, contributory, packaging, athletic, administrative, prolific, occasional, durable, permanent, implement, permanently, electronically</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;p&gt;punctual, enthusiastic, influential, aggressive, compu
+    
+    </summary>
+    
+      <category term="English" scheme="http://yoursite.com/categories/English/"/>
+    
+    
+      <category term="vocabulary" scheme="http://yoursite.com/tags/vocabulary/"/>
+    
+  </entry>
   
   <entry>
     <title>dream begin with self-discipline</title>
