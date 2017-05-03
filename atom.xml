@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-03T00:05:06.000Z</updated>
+  <updated>2017-05-03T00:07:11.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://yoursite.com/2017/05/03/chapter-4-3/"/>
     <id>http://yoursite.com/2017/05/03/chapter-4-3/</id>
     <published>2017-05-03T00:01:56.000Z</published>
-    <updated>2017-05-03T00:05:06.000Z</updated>
+    <updated>2017-05-03T00:07:11.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><p>#####one time#####<br>adequate, applied, attentive, barren, commonsense, detailed, disabled, exstensive</p>
+    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><h5 id="one-time"><a href="#one-time" class="headerlink" title="one time"></a>one time</h5><p>adequate, applied, attentive, barren, commonsense, detailed, disabled, exstensive</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;p&gt;#####one time#####&lt;br&gt;adequate, applied, attentive, ba
+      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;h5 id=&quot;one-time&quot;&gt;&lt;a href=&quot;#one-time&quot; class=&quot;headerlink&quot; 
     
     </summary>
     
@@ -43,15 +43,15 @@
     <link href="http://yoursite.com/2017/04/18/chapter-4-2/"/>
     <id>http://yoursite.com/2017/04/18/chapter-4-2/</id>
     <published>2017-04-18T14:27:56.000Z</published>
-    <updated>2017-04-24T04:47:16.000Z</updated>
+    <updated>2017-05-03T00:07:22.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><p>#####one time#####<br>punctual, enthusiastic, influential, aggressive, compulsory, contributory, packaging, athletic, administrative, prolific, occasional, durable, permanent, implement, permanently, electronically</p>
-<p>#####two time#<br>punctual, beneficial, compulsory, athletic, cautious, agricultural, occasional, permanent, implement, permanently</p>
+    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><h5 id="one-time"><a href="#one-time" class="headerlink" title="one time"></a>one time</h5><p>punctual, enthusiastic, influential, aggressive, compulsory, contributory, packaging, athletic, administrative, prolific, occasional, durable, permanent, implement, permanently, electronically</p>
+<h5 id="two-time"><a href="#two-time" class="headerlink" title="two time"></a>two time</h5><p>punctual, beneficial, compulsory, athletic, cautious, agricultural, occasional, permanent, implement, permanently</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;p&gt;#####one time#####&lt;br&gt;punctual, enthusiastic, influent
+      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;h5 id=&quot;one-time&quot;&gt;&lt;a href=&quot;#one-time&quot; class=&quot;headerlink&quot; 
     
     </summary>
     
@@ -127,14 +127,14 @@ function unsetproxy() {
     <link href="http://yoursite.com/2017/04/07/YSW-chapter3/"/>
     <id>http://yoursite.com/2017/04/07/YSW-chapter3/</id>
     <published>2017-04-07T00:24:50.000Z</published>
-    <updated>2017-04-12T02:04:43.000Z</updated>
+    <updated>2017-05-03T00:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><p>admission, cutlery, foyer, ointment, parcel, precision, preference, prescription, psychiatrist, psychologist, recipe, respondent, revision, scheme, syndicate, syrup ,steam, trailer, tribe</p>
+    <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><h5 id="one-time"><a href="#one-time" class="headerlink" title="one time"></a>one time</h5><p>admission, cutlery, foyer, ointment, parcel, precision, preference, prescription, psychiatrist, psychologist, recipe, respondent, revision, scheme, syndicate, syrup ,steam, trailer, tribe</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;p&gt;admission, cutlery, foyer, ointment, parcel, precision
+      &lt;h1 id=&quot;错词list&quot;&gt;&lt;a href=&quot;#错词list&quot; class=&quot;headerlink&quot; title=&quot;错词list&quot;&gt;&lt;/a&gt;错词list&lt;/h1&gt;&lt;h5 id=&quot;one-time&quot;&gt;&lt;a href=&quot;#one-time&quot; class=&quot;headerlink&quot; 
     
     </summary>
     
