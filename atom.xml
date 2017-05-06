@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-03T00:07:11.000Z</updated>
+  <updated>2017-05-06T11:37:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习《UNIX&amp;LINUX大学教程》第一、二、三章</title>
+    <link href="http://yoursite.com/2017/05/04/%E5%AD%A6%E4%B9%A0%E3%80%8AUNIX&amp;LINUX%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    <id>http://yoursite.com/2017/05/04/学习《UNIX&amp;LINUX大学教程》第一章/</id>
+    <published>2017-05-04T14:14:58.000Z</published>
+    <updated>2017-05-06T11:37:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>1、读取并解释所输入命令的程序称为“shell”，本书中使用的shell是“Bash”，shell就是“围绕”在内核周围的一种特殊类型程序（命令处理器）的名称，他充当我们与系统交互的个人界面。——page5</p>
+<p>2、Unix最初由Ken Thompson于1969年在贝尔实验室开发，目的是运行他开发的游戏Space Travel。</p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>1、“引导（booting）”是bootstrapping的简写，表示一个古老的谚语“通过自力更生出人头地”。——page9<br>2、操作系统内核提供的基本服务：——page10</p>
+<ul>
+<li>内存管理</li>
+<li>进程管理</li>
+<li>进程间通信</li>
+<li>输入/输出</li>
+<li>文件管理</li>
+<li>安全和访问控制</li>
+<li>网络访问</li>
+</ul>
+<p>3、除内核外，最重要的程序是shell和GUI（graphical user interface，图形用户界面）。Unix=Unix内核+Unix实用工具。——page11</p>
+<p>4、最常见的Linux引导加载程序是GRUB（Grand Unified Bootloader）和LILO（Linux Loader）。GRUB是GNU的一部分，LILO是Linux发行版的一部分。——page29</p>
+<p>5、Unix是一种多用户、多任务处理的操作系统，它由一个类Unix内核、许多类Unix实用工具及一个类Unix shell构成。Linux是任何使用Linux内核的Unix的名称。——page31</p>
+<p>6、Unix是一组为聪明人准备的工具。——page31</p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>1、用Unix术语讲，称界面b终端（terminal），而将其他部件总成为主机（host）。</p>
+<p>2、计算机=终端+主机  终端=输入设施+输出设施</p>
+<p>3、多用户操作系统是指能够同时支持多人使用的系统。</p>
+<p>4、为了连接一台远程主机并仿真一个字符终端，使用ssh（secure shell）命令，为了仿真一个X Window图形终端，可以使用ssh -x命令。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot; title=&quot;第一章&quot;&gt;&lt;/a&gt;第一章&lt;/h2&gt;&lt;p&gt;1、读取并解释所输入命令的程序称为“shell”，本书中使用的shell是“Bash”，shell就是“围绕”在内核周围的一种特殊类
+    
+    </summary>
+    
+      <category term="computer" scheme="http://yoursite.com/categories/computer/"/>
+    
+    
+      <category term="unix" scheme="http://yoursite.com/tags/unix/"/>
+    
+  </entry>
   
   <entry>
     <title>chapter 4.3</title>
