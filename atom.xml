@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-06T11:37:02.000Z</updated>
+  <updated>2017-06-01T03:46:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>learning google news 17.06.01</title>
+    <link href="http://yoursite.com/2017/06/01/learning%20google%20news-07.06.01/"/>
+    <id>http://yoursite.com/2017/06/01/learning google news-07.06.01/</id>
+    <published>2017-06-01T02:55:56.000Z</published>
+    <updated>2017-06-01T03:46:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="生词list"><a href="#生词list" class="headerlink" title="生词list"></a>生词list</h1><h5 id="The-Energy-202-We-may-be-saying-au-revoir-to-Paris-climate-accord"><a href="#The-Energy-202-We-may-be-saying-au-revoir-to-Paris-climate-accord" class="headerlink" title="The Energy 202:We may be saying au revoir to Paris climate accord"></a>The Energy 202:We may be saying au revoir to Paris climate accord</h5><p>au revoir, accord, interpretation, anticipate, rundown</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;生词list&quot;&gt;&lt;a href=&quot;#生词list&quot; class=&quot;headerlink&quot; title=&quot;生词list&quot;&gt;&lt;/a&gt;生词list&lt;/h1&gt;&lt;h5 id=&quot;The-Energy-202-We-may-be-saying-au-revoir-to-Pari
+    
+    </summary>
+    
+      <category term="English" scheme="http://yoursite.com/categories/English/"/>
+    
+    
+      <category term="vocabulary" scheme="http://yoursite.com/tags/vocabulary/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习《UNIX&amp;LINUX大学教程》第一、二、三章</title>
-    <link href="http://yoursite.com/2017/05/04/%E5%AD%A6%E4%B9%A0%E3%80%8AUNIX&amp;LINUX%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
-    <id>http://yoursite.com/2017/05/04/学习《UNIX&amp;LINUX大学教程》第一章/</id>
+    <link href="http://yoursite.com/2017/05/04/%E5%AD%A6%E4%B9%A0%E3%80%8AUNIX&amp;LINUX%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E3%80%81%E4%B8%89%E7%AB%A0/"/>
+    <id>http://yoursite.com/2017/05/04/学习《UNIX&amp;LINUX大学教程》第一、二、三章/</id>
     <published>2017-05-04T14:14:58.000Z</published>
-    <updated>2017-05-06T11:37:02.000Z</updated>
+    <updated>2017-05-09T00:04:37.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>1、读取并解释所输入命令的程序称为“shell”，本书中使用的shell是“Bash”，shell就是“围绕”在内核周围的一种特殊类型程序（命令处理器）的名称，他充当我们与系统交互的个人界面。——page5</p>
 <p>2、Unix最初由Ken Thompson于1969年在贝尔实验室开发，目的是运行他开发的游戏Space Travel。</p>
@@ -58,11 +81,45 @@
   </entry>
   
   <entry>
-    <title>chapter 4.3</title>
-    <link href="http://yoursite.com/2017/05/03/chapter-4-3/"/>
-    <id>http://yoursite.com/2017/05/03/chapter-4-3/</id>
+    <title>学习《UNIX&amp;LINUX大学教程》第四、五、六章</title>
+    <link href="http://yoursite.com/2017/05/04/%E5%AD%A6%E4%B9%A0%E3%80%8AUNIX&amp;LINUX%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
+    <id>http://yoursite.com/2017/05/04/学习《UNIX&amp;LINUX大学教程》第四章/</id>
+    <published>2017-05-04T14:14:58.000Z</published>
+    <updated>2017-05-10T07:46:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p>1、在Unix世界中，有许多不同类型的shell，目前流行的shell是Bash、Csh、Ksh、Zsh。对于Bash和Ksh来说，提示是一个美元符号：$。对于Csh来说，提示是一个百分比符号：%。——page55</p>
+<p>2、修改密码命令：passwd，列举文件命令：ls，复制文件命令：cp，显示进程状态命令：ps。——page59</p>
+<p>3、黑客：那些花费时间在有用（或者至少无害）的编程项目上的人。因此，术语“黑客”通常有正面的含义，描述那些像书呆子一样不停专研的人。此外，“黑客”也指那些知道如何使用计算机创造性地解决问题的聪明人。</p>
+<p>4、骇客：坏家伙，以破坏计算机系统以及做专家不希望他做的事情为乐趣的人。</p>
+<p>5、移除命令：rm。</p>
+<p>6、当以超级用户登录时，提示都将改变成字符#。</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>1、Unix GUI的抽象层次：硬件-内核中的设备驱动程序-X Window-窗口管理器-桌面环境-应用程序/用户。</p>
+<p>2、20实际90年代，X Window窗口管理器主流：mwm（OSF组织）、olwm（UI组织）和twm（MIT）。</p>
+<p>3、Linux的GUI：KDE（Kool Desktop Environment）和Gnome（GNU Network Object Model Environment）。</p>
+<p>4、Gnome的窗口管理器是Metacity，KDE的窗口管理器是kwm。</p>
+<p>5、Gnome用户倾向于简单和条理。他们希望事情有逻辑。如果需要，她们愿意尽最大的努力使事情以一种对他们有意义的方式运行。Gnome用户赞同下述格言：“Form ever follows function（形式永远追随功能）”。KDE用户认为这个世界是一个充满色彩、变化，而且有时还充满迷惑的场所。他们倾向于让生活顺其自然，而不是花费大量的时间来修复小的细节。他们倾向于使事情更好看，动作更漂亮。Gnome用户喜欢控制事情如何运转，KDE用户喜欢控制事情的外观。</p>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>1、</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第四章&quot;&gt;&lt;a href=&quot;#第四章&quot; class=&quot;headerlink&quot; title=&quot;第四章&quot;&gt;&lt;/a&gt;第四章&lt;/h2&gt;&lt;p&gt;1、在Unix世界中，有许多不同类型的shell，目前流行的shell是Bash、Csh、Ksh、Zsh。对于Bash和Ksh来说，
+    
+    </summary>
+    
+      <category term="computer" scheme="http://yoursite.com/categories/computer/"/>
+    
+    
+      <category term="unix" scheme="http://yoursite.com/tags/unix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YSW-chapter 4.3</title>
+    <link href="http://yoursite.com/2017/05/03/YSW-chapter-4-3/"/>
+    <id>http://yoursite.com/2017/05/03/YSW-chapter-4-3/</id>
     <published>2017-05-03T00:01:56.000Z</published>
-    <updated>2017-05-03T00:07:11.000Z</updated>
+    <updated>2018-01-14T12:34:04.418Z</updated>
     
     <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><h5 id="one-time"><a href="#one-time" class="headerlink" title="one time"></a>one time</h5><p>adequate, applied, attentive, barren, commonsense, detailed, disabled, exstensive</p>
 ]]></content>
@@ -81,11 +138,11 @@
   </entry>
   
   <entry>
-    <title>chapter 4.2</title>
-    <link href="http://yoursite.com/2017/04/18/chapter-4-2/"/>
-    <id>http://yoursite.com/2017/04/18/chapter-4-2/</id>
+    <title>YSW-chapter 4.2</title>
+    <link href="http://yoursite.com/2017/04/18/YSW-chapter-4-2/"/>
+    <id>http://yoursite.com/2017/04/18/YSW-chapter-4-2/</id>
     <published>2017-04-18T14:27:56.000Z</published>
-    <updated>2017-05-03T00:07:22.000Z</updated>
+    <updated>2018-01-14T12:33:39.569Z</updated>
     
     <content type="html"><![CDATA[<h1 id="错词list"><a href="#错词list" class="headerlink" title="错词list"></a>错词list</h1><h5 id="one-time"><a href="#one-time" class="headerlink" title="one time"></a>one time</h5><p>punctual, enthusiastic, influential, aggressive, compulsory, contributory, packaging, athletic, administrative, prolific, occasional, durable, permanent, implement, permanently, electronically</p>
 <h5 id="two-time"><a href="#two-time" class="headerlink" title="two time"></a>two time</h5><p>punctual, beneficial, compulsory, athletic, cautious, agricultural, occasional, permanent, implement, permanently</p>
