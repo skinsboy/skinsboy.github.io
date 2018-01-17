@@ -361,8 +361,7 @@
       
         
           
-            <p>##@property#</p>
-<p>####@property属性之一##<br>@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：</p>
+            <h2 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h2><h4 id="property属性之一"><a href="#property属性之一" class="headerlink" title="@property属性之一"></a>@property属性之一</h4><p>@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：</p>
 <pre><code>class Person(object):
     def __init__(self,first_name,last_name):
         self.first_name=first_name
@@ -371,7 +370,7 @@
     def full_name(self):
     return &quot;%s %s&quot;%(self.first_name,self.last_name)
 </code></pre><p>我们创建了一个full_name方法，它有一个@property装饰器。可以使用person.full_name访问，但是不能将该属性设为其他值，会引发一个AttributeError错误，改变full_name属性唯一方法是：<code>person.first_name=&quot;Dan&quot;</code></p>
-<p>####@property属性之二##<br>使用property取代setter和getter方法，让我们假设有一些遗留代码，她们是由一些对Python理解不够好的人写的。</p>
+<h4 id="property属性之二"><a href="#property属性之二" class="headerlink" title="@property属性之二"></a>@property属性之二</h4><p>使用property取代setter和getter方法，让我们假设有一些遗留代码，她们是由一些对Python理解不够好的人写的。</p>
 <pre><code>from decimal import Decimal
 class fees(object):
     def __init__(self):
@@ -429,7 +428,8 @@ if __name__==&quot;__main__&quot;:
 <pre><code>&gt;&gt;&gt;f=Fees()
 &gt;&gt;&gt;f.fee=&quot;1&quot;
 </code></pre><p>如果你看属性函数的说明，他有fget,fset,fdel和doc几个参数。如果你想对属性使用del命令，你可以使用@fee.deleter创建另一个装饰器来装饰相通名字的函数从而实现删除的同样效果。</p>
-<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><p>Python用下划线作为变量前缀和后缀指定特殊变量。</p>
+<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><hr>
+<p>Python用下划线作为变量前缀和后缀指定特殊变量。</p>
 <p>1、<code>_XXX</code>代表不能直接访问的类属性，只有类对象和子类对象自己能访问     到这些变量，需通过提供的接口进行访问；<br>2、<code>__XXX</code>代表类的私有成员，只有类对象自己能访问，连子类对象也不能访问到这个数据；<br>3、<code>__XXX__</code>代表Python里特殊方法专用的标识。</p>
 <pre><code>class A(object):
     def __init__(self):
