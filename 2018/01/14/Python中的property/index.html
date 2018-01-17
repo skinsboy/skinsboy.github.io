@@ -103,7 +103,7 @@ class Person(object):
     def __init__(self,first_name,last_name):
         self.first_name=first_name
         self.last_name=last_name">
-<meta property="og:updated_time" content="2018-01-17T15:03:27.296Z">
+<meta property="og:updated_time" content="2018-01-17T15:04:25.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的property">
 <meta name="twitter:description" content="@property@property属性之一@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：
@@ -434,8 +434,7 @@ if __name__==&quot;__main__&quot;:
 <pre><code>&gt;&gt;&gt;f=Fees()
 &gt;&gt;&gt;f.fee=&quot;1&quot;
 </code></pre><p>如果你看属性函数的说明，他有fget,fset,fdel和doc几个参数。如果你想对属性使用del命令，你可以使用@fee.deleter创建另一个装饰器来装饰相通名字的函数从而实现删除的同样效果。</p>
-<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><hr>
-<p>Python用下划线作为变量前缀和后缀指定特殊变量。</p>
+<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><p>Python用下划线作为变量前缀和后缀指定特殊变量。</p>
 <p>1、<code>_XXX</code>代表不能直接访问的类属性，只有类对象和子类对象自己能访问     到这些变量，需通过提供的接口进行访问；<br>2、<code>__XXX</code>代表类的私有成员，只有类对象自己能访问，连子类对象也不能访问到这个数据；<br>3、<code>__XXX__</code>代表Python里特殊方法专用的标识。</p>
 <pre><code>class A(object):
     def __init__(self):
