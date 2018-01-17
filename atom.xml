@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-17T15:07:55.071Z</updated>
+  <updated>2018-01-17T15:23:39.015Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wake up 1</title>
+    <link href="http://yoursite.com/2018/01/17/wake%20up%201/"/>
+    <id>http://yoursite.com/2018/01/17/wake up 1/</id>
+    <published>2018-01-17T15:23:39.015Z</published>
+    <updated>2018-01-17T15:23:39.015Z</updated>
+    
+    <content type="html"><![CDATA[<p>无比清醒的时候，跟随自己的意志前行，管他遥远或艰难，无需恐慌，脚踏实地  \  颓废不堪的时候，照照镜子，回想那个曾经的你 \ 不要做过多的停留，原地只属于苍白的过去</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;无比清醒的时候，跟随自己的意志前行，管他遥远或艰难，无需恐慌，脚踏实地  \  颓废不堪的时候，照照镜子，回想那个曾经的你 \ 不要做过多的停留，原地只属于苍白的过去&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="sing myself" scheme="http://yoursite.com/categories/sing-myself/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Python中的property</title>
@@ -177,6 +199,40 @@ C.public()
   </entry>
   
   <entry>
+    <title>学习《UNIX&amp;LINUX大学教程》第四、五、六章</title>
+    <link href="http://yoursite.com/2017/05/04/%E5%AD%A6%E4%B9%A0%E3%80%8AUNIX&amp;LINUX%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
+    <id>http://yoursite.com/2017/05/04/学习《UNIX&amp;LINUX大学教程》第四章/</id>
+    <published>2017-05-04T14:14:58.000Z</published>
+    <updated>2017-05-10T07:46:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p>1、在Unix世界中，有许多不同类型的shell，目前流行的shell是Bash、Csh、Ksh、Zsh。对于Bash和Ksh来说，提示是一个美元符号：$。对于Csh来说，提示是一个百分比符号：%。——page55</p>
+<p>2、修改密码命令：passwd，列举文件命令：ls，复制文件命令：cp，显示进程状态命令：ps。——page59</p>
+<p>3、黑客：那些花费时间在有用（或者至少无害）的编程项目上的人。因此，术语“黑客”通常有正面的含义，描述那些像书呆子一样不停专研的人。此外，“黑客”也指那些知道如何使用计算机创造性地解决问题的聪明人。</p>
+<p>4、骇客：坏家伙，以破坏计算机系统以及做专家不希望他做的事情为乐趣的人。</p>
+<p>5、移除命令：rm。</p>
+<p>6、当以超级用户登录时，提示都将改变成字符#。</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>1、Unix GUI的抽象层次：硬件-内核中的设备驱动程序-X Window-窗口管理器-桌面环境-应用程序/用户。</p>
+<p>2、20实际90年代，X Window窗口管理器主流：mwm（OSF组织）、olwm（UI组织）和twm（MIT）。</p>
+<p>3、Linux的GUI：KDE（Kool Desktop Environment）和Gnome（GNU Network Object Model Environment）。</p>
+<p>4、Gnome的窗口管理器是Metacity，KDE的窗口管理器是kwm。</p>
+<p>5、Gnome用户倾向于简单和条理。他们希望事情有逻辑。如果需要，她们愿意尽最大的努力使事情以一种对他们有意义的方式运行。Gnome用户赞同下述格言：“Form ever follows function（形式永远追随功能）”。KDE用户认为这个世界是一个充满色彩、变化，而且有时还充满迷惑的场所。他们倾向于让生活顺其自然，而不是花费大量的时间来修复小的细节。他们倾向于使事情更好看，动作更漂亮。Gnome用户喜欢控制事情如何运转，KDE用户喜欢控制事情的外观。</p>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>1、</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第四章&quot;&gt;&lt;a href=&quot;#第四章&quot; class=&quot;headerlink&quot; title=&quot;第四章&quot;&gt;&lt;/a&gt;第四章&lt;/h2&gt;&lt;p&gt;1、在Unix世界中，有许多不同类型的shell，目前流行的shell是Bash、Csh、Ksh、Zsh。对于Bash和Ksh来说，
+    
+    </summary>
+    
+      <category term="computer" scheme="http://yoursite.com/categories/computer/"/>
+    
+    
+      <category term="unix" scheme="http://yoursite.com/tags/unix/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习《UNIX&amp;LINUX大学教程》第一、二、三章</title>
     <link href="http://yoursite.com/2017/05/04/%E5%AD%A6%E4%B9%A0%E3%80%8AUNIX&amp;LINUX%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E3%80%81%E4%B8%89%E7%AB%A0/"/>
     <id>http://yoursite.com/2017/05/04/学习《UNIX&amp;LINUX大学教程》第一、二、三章/</id>
@@ -208,40 +264,6 @@ C.public()
     <summary type="html">
     
       &lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot; title=&quot;第一章&quot;&gt;&lt;/a&gt;第一章&lt;/h2&gt;&lt;p&gt;1、读取并解释所输入命令的程序称为“shell”，本书中使用的shell是“Bash”，shell就是“围绕”在内核周围的一种特殊类
-    
-    </summary>
-    
-      <category term="computer" scheme="http://yoursite.com/categories/computer/"/>
-    
-    
-      <category term="unix" scheme="http://yoursite.com/tags/unix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习《UNIX&amp;LINUX大学教程》第四、五、六章</title>
-    <link href="http://yoursite.com/2017/05/04/%E5%AD%A6%E4%B9%A0%E3%80%8AUNIX&amp;LINUX%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
-    <id>http://yoursite.com/2017/05/04/学习《UNIX&amp;LINUX大学教程》第四章/</id>
-    <published>2017-05-04T14:14:58.000Z</published>
-    <updated>2017-05-10T07:46:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p>1、在Unix世界中，有许多不同类型的shell，目前流行的shell是Bash、Csh、Ksh、Zsh。对于Bash和Ksh来说，提示是一个美元符号：$。对于Csh来说，提示是一个百分比符号：%。——page55</p>
-<p>2、修改密码命令：passwd，列举文件命令：ls，复制文件命令：cp，显示进程状态命令：ps。——page59</p>
-<p>3、黑客：那些花费时间在有用（或者至少无害）的编程项目上的人。因此，术语“黑客”通常有正面的含义，描述那些像书呆子一样不停专研的人。此外，“黑客”也指那些知道如何使用计算机创造性地解决问题的聪明人。</p>
-<p>4、骇客：坏家伙，以破坏计算机系统以及做专家不希望他做的事情为乐趣的人。</p>
-<p>5、移除命令：rm。</p>
-<p>6、当以超级用户登录时，提示都将改变成字符#。</p>
-<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>1、Unix GUI的抽象层次：硬件-内核中的设备驱动程序-X Window-窗口管理器-桌面环境-应用程序/用户。</p>
-<p>2、20实际90年代，X Window窗口管理器主流：mwm（OSF组织）、olwm（UI组织）和twm（MIT）。</p>
-<p>3、Linux的GUI：KDE（Kool Desktop Environment）和Gnome（GNU Network Object Model Environment）。</p>
-<p>4、Gnome的窗口管理器是Metacity，KDE的窗口管理器是kwm。</p>
-<p>5、Gnome用户倾向于简单和条理。他们希望事情有逻辑。如果需要，她们愿意尽最大的努力使事情以一种对他们有意义的方式运行。Gnome用户赞同下述格言：“Form ever follows function（形式永远追随功能）”。KDE用户认为这个世界是一个充满色彩、变化，而且有时还充满迷惑的场所。他们倾向于让生活顺其自然，而不是花费大量的时间来修复小的细节。他们倾向于使事情更好看，动作更漂亮。Gnome用户喜欢控制事情如何运转，KDE用户喜欢控制事情的外观。</p>
-<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>1、</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;第四章&quot;&gt;&lt;a href=&quot;#第四章&quot; class=&quot;headerlink&quot; title=&quot;第四章&quot;&gt;&lt;/a&gt;第四章&lt;/h2&gt;&lt;p&gt;1、在Unix世界中，有许多不同类型的shell，目前流行的shell是Bash、Csh、Ksh、Zsh。对于Bash和Ksh来说，
     
     </summary>
     
