@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-01T03:46:31.000Z</updated>
+  <updated>2018-01-17T15:01:43.903Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,148 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python中的property</title>
+    <link href="http://yoursite.com/2018/01/14/Python%E4%B8%AD%E7%9A%84property/"/>
+    <id>http://yoursite.com/2018/01/14/Python中的property/</id>
+    <published>2018-01-14T12:42:50.000Z</published>
+    <updated>2018-01-17T15:01:43.903Z</updated>
+    
+    <content type="html"><![CDATA[<p>##@property#</p>
+<p>####@property属性之一##<br>@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：</p>
+<pre><code>class Person(object):
+    def __init__(self,first_name,last_name):
+        self.first_name=first_name
+        self.last_name=last_name
+    @property
+    def full_name(self):
+    return &quot;%s %s&quot;%(self.first_name,self.last_name)
+</code></pre><p>我们创建了一个full_name方法，它有一个@property装饰器。可以使用person.full_name访问，但是不能将该属性设为其他值，会引发一个AttributeError错误，改变full_name属性唯一方法是：<code>person.first_name=&quot;Dan&quot;</code></p>
+<p>####@property属性之二##<br>使用property取代setter和getter方法，让我们假设有一些遗留代码，她们是由一些对Python理解不够好的人写的。</p>
+<pre><code>from decimal import Decimal
+class fees(object):
+    def __init__(self):
+        self._fee=None
+    def get_fee(self):
+        return self._fee
+    def set_fee(self,value):
+        if isinstance(value,str):
+            self._fee=Decimal(value)
+        elif isinstance(value,Decimal):
+            self._fee=value
+</code></pre><p>要使用这个类，我们必须要使用定义的getter和setter方法：</p>
+<pre><code>&gt;&gt;&gt;f=Fees()
+&gt;&gt;&gt;f.set_fee(&quot;1&quot;)
+&gt;&gt;&gt;f.get_fee()
+Decimal(&apos;1&apos;)
+</code></pre><p>如果你想添加可以使用正常点符号访问的属性，而不破坏所有依赖于这段代码的应用程序，你可以通过添加一个属性函数非常简单地改变它：</p>
+<pre><code>from decimal import Decimal
+class fees(object):
+    def __init__(self):
+        self._fee=None
+    def get_fee(self):
+        return self._fee
+    def set_fee(self,value):
+        if isinstance(value,str):
+            self._fee=Decimal(value)
+        elif isinstance(value,Decimal):
+            self._fee=value
+    fee=property(get_fee,set_fee)
+</code></pre><p>在这段代码的末尾添加了一行，现在可以这样做：</p>
+<pre><code>&gt;&gt;&gt;f=Fees()
+&gt;&gt;&gt;f.set_fee(&quot;1&quot;)
+&gt;&gt;&gt;f.fee
+Decimal(&apos;1&apos;)
+&gt;&gt;&gt;f.fee=&quot;2&quot;
+&gt;&gt;&gt;f.get_fee()
+Decimal(&apos;2&apos;) 
+</code></pre><p>正如你所看到的，当我们以这种方式使用属性函数时，它允许fee属性设置并获取值本身而不破坏原有代码。让我们使用属性装饰器来重写这段代码，看看我们是否能得到一个允许设置的属性值。</p>
+<pre><code>from decimal import Decimal
+class fees(object):
+    def __init__(self):
+        self._fee=None
+    @property
+    def fee(self): &quot;&quot;the fee property - the getter&quot;&quot;
+        return self._fee
+    @fee.setter
+    def fee(self,value): &quot;&quot;the setter of the fee property&quot;&quot;
+        if isinstance(value,str):
+            self._fee=Decimal(value)
+        elif isinstance(value,Decimal):
+            self._fee=value
+if __name__==&quot;__main__&quot;:
+    f=Fees()
+</code></pre><p>上面代码演示了如何为fee属性创建一个setter方法。可以用一个名为@fee.setter的装饰器装饰第二个方法名也为fee的方法来实现这个。当你如下所做是，setter被调用：</p>
+<pre><code>&gt;&gt;&gt;f=Fees()
+&gt;&gt;&gt;f.fee=&quot;1&quot;
+</code></pre><p>如果你看属性函数的说明，他有fget,fset,fdel和doc几个参数。如果你想对属性使用del命令，你可以使用@fee.deleter创建另一个装饰器来装饰相通名字的函数从而实现删除的同样效果。</p>
+<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><p>Python用下划线作为变量前缀和后缀指定特殊变量。</p>
+<p>1、<code>_XXX</code>代表不能直接访问的类属性，只有类对象和子类对象自己能访问     到这些变量，需通过提供的接口进行访问；<br>2、<code>__XXX</code>代表类的私有成员，只有类对象自己能访问，连子类对象也不能访问到这个数据；<br>3、<code>__XXX__</code>代表Python里特殊方法专用的标识。</p>
+<pre><code>class A(object):
+    def __init__(self):
+        self.__private()
+        self.public()
+    def __private(self):
+        print(&quot;A.__private()&quot;)
+    def public(self):
+        print(&quot;A.public()&quot;)
+
+class B(A):
+    def __private(self):
+        print(&quot;B.__private()&quot;)
+    def public(self):
+        print(&quot;B.public()&quot;)
+
+b=B()
+答案：
+A.__private()
+B.public()
+</code></pre><p>我们可以把代码分为三个代码块：类A的定义、类B的定义和变量b的定义。根据类定义，我们知道代码给类A定义了三个成员变量，类B定义了两个成员变量，可以通过dir(A)和dir(B)验证：</p>
+<pre><code>class
+&gt;&gt;&gt; dir(A)
+[&apos;_A__private&apos;,&apos;__class__&apos;,&apos;__delattr__&apos;,&apos;__dict__&apos;, &apos;__dir__&apos;,&apos;__doc__&apos;,&apos;__eq__&apos;,&apos;__format__&apos;,&apos;__ge__&apos;,&apos;__getattribute__&apos;,&apos;__gt__&apos;,&apos;__hash__&apos;,&apos;__init__&apos;,&apos;__le__&apos;,&apos;__lt__&apos;,&apos;__module__&apos;,&apos;__ne__&apos;,&apos;__new__&apos;,&apos;__reduce__&apos;,&apos;__reduce_ex__&apos;,&apos;__repr__&apos;&apos;__setattr__&apos;,&apos;__sizeof__&apos;,&apos;__str__&apos;, &apos;__subclasshook__&apos;, &apos;__weakref__&apos;, &apos;public&apos;]
+&gt;&gt;&gt; dir(B)
+[&apos;_A__private&apos;,&apos;_B__private&apos;,&apos;__class__&apos;,&apos;__delattr__&apos;,&apos;__dict__&apos;,&apos;__dir__&apos;,&apos;__doc__&apos;,&apos;__eq__&apos;,&apos;__format__&apos;,&apos;__ge__&apos;,&apos;__getattribute__&apos;,&apos;__gt__&apos;,&apos;__hash__&apos;,&apos;__init__&apos;,&apos;__le__&apos;,&apos;__lt__&apos;,&apos;__module__&apos;,&apos;__ne__&apos;,&apos;__new__&apos;,&apos;__reduce__&apos;,&apos;__reduce_ex__&apos;,&apos;__repr__&apos;,&apos;__setattr__&apos;,&apos;__sizeof__&apos;,&apos;__str__&apos;,&apos;__subclasshook__&apos;,&apos;__weakref__&apos;, &apos;public&apos;]
+</code></pre><p>也就是说私有变量<strong>foo经过mangle成为_ClassName_foo后继承给了子类。这就是所谓的私有变量轧压（Private name mangling）。如类A里的</strong>private标识符将被转换为_A__private。因为类A定义了一个私有成员函数（变量），所以在代码生成之前先执行私有变量轧压。轧压之后，类A的代码就变成：</p>
+<pre><code>class A(object):
+    def __init__(self):&quot;&quot;__init__表示在创建实例的时候，实例会自动调用这个方法，一般用来对实例的属性进行初始化&quot;&quot;
+        self._A__private()
+        self.public()
+    def _A__private(self):
+        print(&quot;A.__private()&quot;)
+    def public(self):
+        print(&quot;A.public()&quot;)
+</code></pre><p>因为在类B定义的时候没有覆盖<strong>init</strong>方法，所以调用的仍然是A.<strong>init</strong>，即执行了self._A<strong>private(),自然输出A.</strong>private()了。<br>下面代码可以增强说服力，增进理解：</p>
+<pre><code>class C(A):
+    def __init__(self):&quot;&quot;重写__init__，不再调用self._A__private&quot;&quot;
+        self.__private()
+        self.public()
+    def __private(self):
+        print(&quot;C.__private()&quot;)
+    def public(self):
+        print(&quot;C.public()&quot;) 
+
+&gt;&gt;&gt;c=C()
+C.__private()
+C.public()   
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##@property#&lt;/p&gt;
+&lt;p&gt;####@property属性之一##&lt;br&gt;@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Person(object):
+    def __init_
+    
+    </summary>
+    
+      <category term="computer" scheme="http://yoursite.com/categories/computer/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>learning google news 17.06.01</title>
