@@ -103,7 +103,7 @@ class Person(object):
     def __init__(self,first_name,last_name):
         self.first_name=first_name
         self.last_name=last_name">
-<meta property="og:updated_time" content="2018-01-17T15:07:55.071Z">
+<meta property="og:updated_time" content="2018-01-20T03:49:22.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的property">
 <meta name="twitter:description" content="@property@property属性之一@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：
@@ -462,8 +462,9 @@ B.public()
 &gt;&gt;&gt; dir(B)
 [&apos;_A__private&apos;,&apos;_B__private&apos;,&apos;__class__&apos;,&apos;__delattr__&apos;,&apos;__dict__&apos;,&apos;__dir__&apos;,&apos;__doc__&apos;,&apos;__eq__&apos;,&apos;__format__&apos;,&apos;__ge__&apos;,&apos;__getattribute__&apos;,&apos;__gt__&apos;,&apos;__hash__&apos;,&apos;__init__&apos;,&apos;__le__&apos;,&apos;__lt__&apos;,&apos;__module__&apos;,&apos;__ne__&apos;,&apos;__new__&apos;,&apos;__reduce__&apos;,&apos;__reduce_ex__&apos;,&apos;__repr__&apos;,&apos;__setattr__&apos;,&apos;__sizeof__&apos;,&apos;__str__&apos;,&apos;__subclasshook__&apos;,&apos;__weakref__&apos;, &apos;public&apos;]
 </code></pre><p>也就是说私有变量<code>__foo</code>经过mangle成为<code>_ClassName_foo</code>后继承给了子类。这就是所谓的私有变量轧压（Private name mangling）。如类A里的<code>__private</code>标识符将被转换为<code>_A__private</code>。因为类A定义了一个私有成员函数（变量），所以在代码生成之前先执行私有变量轧压。轧压之后，类A的代码就变成：</p>
-<pre><code>class A(object):
-    def __init__(self):&quot;&quot;__init__表示在创建实例的时候，实例会自动调用这个方法，一般用来对实例的属性进行初始化&quot;&quot;
+<pre><code>#__init__表示在创建实例的时候，实例会自动调用这个方法，一般用来对实例的属性进行初始化#
+class A(object):
+    def __init__(self):
         self._A__private()
         self.public()
     def _A__private(self):

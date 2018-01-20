@@ -373,8 +373,31 @@
 
 &gt;&gt;&gt; Chain().status.user.timeline.list
 &apos;/status/user/timeline/list&apos;    
-</code></pre><p>运行<code>Chain().status.user.timeline.list</code>等于先运行<code>Chain().status</code>，然后再依次运行<code>.user</code>、<code>.timeline</code>、<code>.list</code>，运行<code>Chain().status</code>的时候，查找是否有<code>status</code>方法，答案是没有，则执行<code>getattr</code>方法并输出结果，</p>
+</code></pre><p>运行<code>Chain().status.user.timeline.list</code>等于先运行<code>Chain()实例的status属性</code>，然后再依次运行<code>.user属性</code>、<code>.timeline属性</code>、<code>.list属性</code>，运行<code>Chain().status</code>的时候，查找实例是否有<code>status</code>方法，答案是没有，则执行<code>getattr</code>方法并输出结果，因为将<code>status</code>赋值给了<code>path</code>，此时<code>self._path=&#39;&#39;</code>，所以<code>return Chain(&#39;/status&#39;)</code>，见下面的简单示例：</p>
+<pre><code>class empty:
+    def __getattr__(self,attr):
+        return &apos;/%s&apos; % attr
 
+&gt;&gt;&gt;empty().haha
+&apos;/haha&apos;
+&gt;&gt;&gt;empty().hehe
+&apos;/hehe&apos;
+</code></pre><p>然后继续运行<code>Chain(&#39;/status&#39;).user</code>，<code>return Chain(&#39;/status/user&#39;)</code>，依次向后，最后<code>return Chain(&#39;/status/user/timeline/list&#39;)</code>，由<code>def __init__</code>转向<code>def __str__</code>，最后输出<code>self._path</code>。</p>
+<blockquote>
+<p>def <strong>init</strong>(self, path=’’):说明</p>
+</blockquote>
+<p>该表示可传入空参数，自动执行<code>path=&#39;&#39;</code>，也可以传入具体参数<code>X</code>，则<code>path=X</code>，见下面的简单示例：</p>
+<pre><code>class Chain(object):
+    def __init__(self, path=&apos;&apos;):
+        self._path = path
+    def print_path(self):
+        print(&apos;%s&apos;% self._path)
+
+&gt;&gt;&gt;word=Chain().print_path()
+
+&gt;&gt;&gt;word=Chain(&apos;ha&apos;).print_path()
+ha
+</code></pre>
           
         
       
@@ -754,8 +777,9 @@ B.public()
 &gt;&gt;&gt; dir(B)
 [&apos;_A__private&apos;,&apos;_B__private&apos;,&apos;__class__&apos;,&apos;__delattr__&apos;,&apos;__dict__&apos;,&apos;__dir__&apos;,&apos;__doc__&apos;,&apos;__eq__&apos;,&apos;__format__&apos;,&apos;__ge__&apos;,&apos;__getattribute__&apos;,&apos;__gt__&apos;,&apos;__hash__&apos;,&apos;__init__&apos;,&apos;__le__&apos;,&apos;__lt__&apos;,&apos;__module__&apos;,&apos;__ne__&apos;,&apos;__new__&apos;,&apos;__reduce__&apos;,&apos;__reduce_ex__&apos;,&apos;__repr__&apos;,&apos;__setattr__&apos;,&apos;__sizeof__&apos;,&apos;__str__&apos;,&apos;__subclasshook__&apos;,&apos;__weakref__&apos;, &apos;public&apos;]
 </code></pre><p>也就是说私有变量<code>__foo</code>经过mangle成为<code>_ClassName_foo</code>后继承给了子类。这就是所谓的私有变量轧压（Private name mangling）。如类A里的<code>__private</code>标识符将被转换为<code>_A__private</code>。因为类A定义了一个私有成员函数（变量），所以在代码生成之前先执行私有变量轧压。轧压之后，类A的代码就变成：</p>
-<pre><code>class A(object):
-    def __init__(self):&quot;&quot;__init__表示在创建实例的时候，实例会自动调用这个方法，一般用来对实例的属性进行初始化&quot;&quot;
+<pre><code>#__init__表示在创建实例的时候，实例会自动调用这个方法，一般用来对实例的属性进行初始化#
+class A(object):
+    def __init__(self):
         self._A__private()
         self.public()
     def _A__private(self):
