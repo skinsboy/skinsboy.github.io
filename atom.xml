@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-20T05:23:51.998Z</updated>
+  <updated>2018-01-22T13:44:36.303Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>StringIO and ByteIO</title>
+    <link href="http://yoursite.com/2018/01/22/StringIO%20and%20ByteIO/"/>
+    <id>http://yoursite.com/2018/01/22/StringIO and ByteIO/</id>
+    <published>2018-01-22T13:44:33.000Z</published>
+    <updated>2018-01-22T13:44:36.303Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="StringIO-and-ByteIO"><a href="#StringIO-and-ByteIO" class="headerlink" title="StringIO and ByteIO"></a>StringIO and ByteIO</h1><pre><code>&gt;&gt;&gt;from io import StringIO
+&gt;&gt;&gt;f=StringIO()
+&gt;&gt;&gt;f.write(&apos;Hello World&apos;)
+11  #代表光标的位置
+&gt;&gt;&gt;f.read()
+</code></pre><p>  执行后，无任何结果，是the stream position的原，此时光标已经移到了11，所以<code>read</code>的内容为11之后的内容，为空，若想得出<code>&#39;Hello World&#39;</code>，则需将光标移至0位置，查看光标位置可以通过<code>f.tell()</code>获得，移动命令是<code>f.seek(0)</code>。而<code>f.getvalue()</code>则无需移动光标就可获得<code>&#39;Hello World&#39;</code>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;StringIO-and-ByteIO&quot;&gt;&lt;a href=&quot;#StringIO-and-ByteIO&quot; class=&quot;headerlink&quot; title=&quot;StringIO and ByteIO&quot;&gt;&lt;/a&gt;StringIO and ByteIO&lt;/h1&gt;&lt;pre&gt;
+    
+    </summary>
+    
+      <category term="computer" scheme="http://yoursite.com/categories/computer/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/01/22/Python%20english/"/>
+    <id>http://yoursite.com/2018/01/22/Python english/</id>
+    <published>2018-01-22T02:00:17.884Z</published>
+    <updated>2018-01-22T13:45:10.534Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python-English"><a href="#Python-English" class="headerlink" title="Python English"></a>Python English</h1><p>vice-versa  反之亦然<br>not vice-versa 但反过来就不是这样了<br>substitution 替换；代替<br>collide 碰撞；冲突；抵触<br>backslash 反斜线符号<br>literal backslash 转义符</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Python-English&quot;&gt;&lt;a href=&quot;#Python-English&quot; class=&quot;headerlink&quot; title=&quot;Python English&quot;&gt;&lt;/a&gt;Python English&lt;/h1&gt;&lt;p&gt;vice-versa  反之亦然&lt;br&gt;no
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>面向对象高级编程-定制类</title>
@@ -100,7 +147,7 @@ ha
     <link href="http://yoursite.com/2018/01/14/Python%E4%B8%AD%E7%9A%84property/"/>
     <id>http://yoursite.com/2018/01/14/Python中的property/</id>
     <published>2018-01-14T12:42:50.000Z</published>
-    <updated>2018-01-20T03:49:22.962Z</updated>
+    <updated>2018-01-20T11:35:49.042Z</updated>
     
     <content type="html"><![CDATA[<h2 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h2><h4 id="property属性之一"><a href="#property属性之一" class="headerlink" title="@property属性之一"></a>@property属性之一</h4><p>@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：</p>
 <pre><code>class Person(object):

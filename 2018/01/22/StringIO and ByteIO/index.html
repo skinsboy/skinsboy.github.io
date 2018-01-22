@@ -89,28 +89,31 @@
 
 
 
-<meta name="description" content="@property@property属性之一@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：
-class Person(object):
-    def __init__(self,first_name,last_name):
-        self.first_name=first_name
-        self.last_name=last_name">
+<meta name="description" content="StringIO and ByteIO&amp;gt;&amp;gt;&amp;gt;from io import StringIO
+&amp;gt;&amp;gt;&amp;gt;f=StringIO()
+&amp;gt;&amp;gt;&amp;gt;f.write(&amp;apos;Hello World&amp;apos;)
+11  #代表光标的位置
+&amp;gt;&amp;gt;&amp;gt;f.read()
+  执行后，无任何结果，是the stream position的原，此时光标已经">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python中的property">
-<meta property="og:url" content="http://yoursite.com/2018/01/14/Python中的property/index.html">
+<meta property="og:title" content="StringIO and ByteIO">
+<meta property="og:url" content="http://yoursite.com/2018/01/22/StringIO and ByteIO/index.html">
 <meta property="og:site_name" content="skinsboy’s FM blog">
-<meta property="og:description" content="@property@property属性之一@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：
-class Person(object):
-    def __init__(self,first_name,last_name):
-        self.first_name=first_name
-        self.last_name=last_name">
-<meta property="og:updated_time" content="2018-01-20T11:35:49.042Z">
+<meta property="og:description" content="StringIO and ByteIO&amp;gt;&amp;gt;&amp;gt;from io import StringIO
+&amp;gt;&amp;gt;&amp;gt;f=StringIO()
+&amp;gt;&amp;gt;&amp;gt;f.write(&amp;apos;Hello World&amp;apos;)
+11  #代表光标的位置
+&amp;gt;&amp;gt;&amp;gt;f.read()
+  执行后，无任何结果，是the stream position的原，此时光标已经">
+<meta property="og:updated_time" content="2018-01-22T13:44:36.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python中的property">
-<meta name="twitter:description" content="@property@property属性之一@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：
-class Person(object):
-    def __init__(self,first_name,last_name):
-        self.first_name=first_name
-        self.last_name=last_name">
+<meta name="twitter:title" content="StringIO and ByteIO">
+<meta name="twitter:description" content="StringIO and ByteIO&amp;gt;&amp;gt;&amp;gt;from io import StringIO
+&amp;gt;&amp;gt;&amp;gt;f=StringIO()
+&amp;gt;&amp;gt;&amp;gt;f.write(&amp;apos;Hello World&amp;apos;)
+11  #代表光标的位置
+&amp;gt;&amp;gt;&amp;gt;f.read()
+  执行后，无任何结果，是the stream position的原，此时光标已经">
 
 
 
@@ -138,13 +141,13 @@ class Person(object):
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/14/Python中的property/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/22/StringIO and ByteIO/"/>
 
 
 
 
 
-  <title> Python中的property | skinsboy’s FM blog </title>
+  <title> StringIO and ByteIO | skinsboy’s FM blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +276,7 @@ class Person(object):
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/14/Python中的property/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/22/StringIO and ByteIO/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="skinsboy">
@@ -294,7 +297,7 @@ class Person(object):
             
             
               
-                Python中的property
+                StringIO and ByteIO
               
             
           </h1>
@@ -309,8 +312,8 @@ class Person(object):
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-14T20:42:50+08:00">
-                2018-01-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T21:44:33+08:00">
+                2018-01-22
               </time>
             
 
@@ -367,124 +370,13 @@ class Person(object):
       
 
       
-        <h2 id="property"><a href="#property" class="headerlink" title="@property"></a>@property</h2><h4 id="property属性之一"><a href="#property属性之一" class="headerlink" title="@property属性之一"></a>@property属性之一</h4><p>@property是属性函数的意思，它可以将一个类方法转变成一个类属性。例子如下：</p>
-<pre><code>class Person(object):
-    def __init__(self,first_name,last_name):
-        self.first_name=first_name
-        self.last_name=last_name
-    @property
-    def full_name(self):
-    return &quot;%s %s&quot;%(self.first_name,self.last_name)
-</code></pre><p>我们创建了一个<code>full_name</code>方法，它有一个@property装饰器。可以使用<code>person.full_name</code>访问，但是不能将该属性设为其他值，会引发一个<code>AttributeError</code>错误，改变<code>full_name</code>属性唯一方法是：<code>person.first_name=&quot;Dan&quot;</code></p>
-<h4 id="property属性之二"><a href="#property属性之二" class="headerlink" title="@property属性之二"></a>@property属性之二</h4><p>使用property取代setter和getter方法，让我们假设有一些遗留代码，它们是由一些对Python理解不够好的人写的。</p>
-<pre><code>from decimal import Decimal
-class fees(object):
-    def __init__(self):
-        self._fee=None
-    def get_fee(self):
-        return self._fee
-    def set_fee(self,value):
-        if isinstance(value,str):
-            self._fee=Decimal(value)
-        elif isinstance(value,Decimal):
-            self._fee=value
-</code></pre><p>要使用这个类，我们必须要使用定义的getter和setter方法：</p>
-<pre><code>&gt;&gt;&gt;f=Fees()
-&gt;&gt;&gt;f.set_fee(&quot;1&quot;)
-&gt;&gt;&gt;f.get_fee()
-Decimal(&apos;1&apos;)
-</code></pre><p>如果你想添加可以使用正常点符号访问的属性，而不破坏所有依赖于这段代码的应用程序，你可以通过添加一个属性函数非常简单地改变它：</p>
-<pre><code>from decimal import Decimal
-class fees(object):
-    def __init__(self):
-        self._fee=None
-    def get_fee(self):
-        return self._fee
-    def set_fee(self,value):
-        if isinstance(value,str):
-            self._fee=Decimal(value)
-        elif isinstance(value,Decimal):
-            self._fee=value
-    fee=property(get_fee,set_fee)
-</code></pre><p>在这段代码的末尾添加了一行，现在可以这样做：</p>
-<pre><code>&gt;&gt;&gt;f=Fees()
-&gt;&gt;&gt;f.set_fee(&quot;1&quot;)
-&gt;&gt;&gt;f.fee
-Decimal(&apos;1&apos;)
-&gt;&gt;&gt;f.fee=&quot;2&quot;
-&gt;&gt;&gt;f.get_fee()
-Decimal(&apos;2&apos;) 
-</code></pre><p>正如你所看到的，当我们以这种方式使用属性函数时，它允许fee属性设置并获取值本身而不破坏原有代码。让我们使用属性装饰器来重写这段代码，看看我们是否能得到一个允许设置的属性值。</p>
-<pre><code>from decimal import Decimal
-class fees(object):
-    def __init__(self):
-        self._fee=None
-    @property
-    def fee(self): &quot;&quot;the fee property - the getter&quot;&quot;
-        return self._fee
-    @fee.setter
-    def fee(self,value): &quot;&quot;the setter of the fee property&quot;&quot;
-        if isinstance(value,str):
-            self._fee=Decimal(value)
-        elif isinstance(value,Decimal):
-            self._fee=value
-if __name__==&quot;__main__&quot;:
-    f=Fees()
-</code></pre><p>上面代码演示了如何为fee属性创建一个setter方法。可以用一个名为@fee.setter的装饰器装饰第二个方法名也为fee的方法来实现这个。当你如下所做是，setter被调用：</p>
-<pre><code>&gt;&gt;&gt;f=Fees()
-&gt;&gt;&gt;f.fee=&quot;1&quot;
-</code></pre><p>如果你看属性函数的说明，他有fget,fset,fdel和doc几个参数。如果你想对属性使用del命令，你可以使用@fee.deleter创建另一个装饰器来装饰相通名字的函数从而实现删除的同样效果。</p>
-<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><p>Python用下划线作为变量前缀和后缀指定特殊变量。</p>
-<p>1、<code>_XXX</code>代表不能直接访问的类属性，只有类对象和子类对象自己能访问     到这些变量，需通过提供的接口进行访问；<br>2、<code>__XXX</code>代表类的私有成员，只有类对象自己能访问，连子类对象也不能访问到这个数据；<br>3、<code>__XXX__</code>代表Python里特殊方法专用的标识。</p>
-<pre><code>class A(object):
-    def __init__(self):
-        self.__private()
-        self.public()
-    def __private(self):
-        print(&quot;A.__private()&quot;)
-    def public(self):
-        print(&quot;A.public()&quot;)
+        <h1 id="StringIO-and-ByteIO"><a href="#StringIO-and-ByteIO" class="headerlink" title="StringIO and ByteIO"></a>StringIO and ByteIO</h1><pre><code>&gt;&gt;&gt;from io import StringIO
+&gt;&gt;&gt;f=StringIO()
+&gt;&gt;&gt;f.write(&apos;Hello World&apos;)
+11  #代表光标的位置
+&gt;&gt;&gt;f.read()
+</code></pre><p>  执行后，无任何结果，是the stream position的原，此时光标已经移到了11，所以<code>read</code>的内容为11之后的内容，为空，若想得出<code>&#39;Hello World&#39;</code>，则需将光标移至0位置，查看光标位置可以通过<code>f.tell()</code>获得，移动命令是<code>f.seek(0)</code>。而<code>f.getvalue()</code>则无需移动光标就可获得<code>&#39;Hello World&#39;</code>。</p>
 
-class B(A):
-    def __private(self):
-        print(&quot;B.__private()&quot;)
-    def public(self):
-        print(&quot;B.public()&quot;)
-
-b=B()
-答案：
-A.__private()
-B.public()
-</code></pre><p>我们可以把代码分为三个代码块：类A的定义、类B的定义和变量b的定义。根据类定义，我们知道代码给类A定义了三个成员变量，类B定义了两个成员变量，可以通过dir(A)和dir(B)验证：</p>
-<pre><code>class
-&gt;&gt;&gt; dir(A)
-[&apos;_A__private&apos;,&apos;__class__&apos;,&apos;__delattr__&apos;,&apos;__dict__&apos;, &apos;__dir__&apos;,&apos;__doc__&apos;,&apos;__eq__&apos;,&apos;__format__&apos;,&apos;__ge__&apos;,&apos;__getattribute__&apos;,&apos;__gt__&apos;,&apos;__hash__&apos;,&apos;__init__&apos;,&apos;__le__&apos;,&apos;__lt__&apos;,&apos;__module__&apos;,&apos;__ne__&apos;,&apos;__new__&apos;,&apos;__reduce__&apos;,&apos;__reduce_ex__&apos;,&apos;__repr__&apos;&apos;__setattr__&apos;,&apos;__sizeof__&apos;,&apos;__str__&apos;, &apos;__subclasshook__&apos;, &apos;__weakref__&apos;, &apos;public&apos;]
-&gt;&gt;&gt; dir(B)
-[&apos;_A__private&apos;,&apos;_B__private&apos;,&apos;__class__&apos;,&apos;__delattr__&apos;,&apos;__dict__&apos;,&apos;__dir__&apos;,&apos;__doc__&apos;,&apos;__eq__&apos;,&apos;__format__&apos;,&apos;__ge__&apos;,&apos;__getattribute__&apos;,&apos;__gt__&apos;,&apos;__hash__&apos;,&apos;__init__&apos;,&apos;__le__&apos;,&apos;__lt__&apos;,&apos;__module__&apos;,&apos;__ne__&apos;,&apos;__new__&apos;,&apos;__reduce__&apos;,&apos;__reduce_ex__&apos;,&apos;__repr__&apos;,&apos;__setattr__&apos;,&apos;__sizeof__&apos;,&apos;__str__&apos;,&apos;__subclasshook__&apos;,&apos;__weakref__&apos;, &apos;public&apos;]
-</code></pre><p>也就是说私有变量<code>__foo</code>经过mangle成为<code>_ClassName_foo</code>后继承给了子类。这就是所谓的私有变量轧压（Private name mangling）。如类A里的<code>__private</code>标识符将被转换为<code>_A__private</code>。因为类A定义了一个私有成员函数（变量），所以在代码生成之前先执行私有变量轧压。轧压之后，类A的代码就变成：</p>
-<pre><code>#__init__表示在创建实例的时候，实例会自动调用这个方法，一般用来对实例的属性进行初始化#
-class A(object):
-    def __init__(self):
-        self._A__private()
-        self.public()
-    def _A__private(self):
-        print(&quot;A.__private()&quot;)
-    def public(self):
-        print(&quot;A.public()&quot;)
-</code></pre><p>因为在类B定义的时候没有覆盖<code>__init__</code>方法，所以调用的仍然是<code>A.__init__</code>，即执行了<code>self._A__private()</code>,自然输出<code>A.__private()</code>了。<br>下面代码可以增强说服力，增进理解：</p>
-<pre><code>class C(A):
-    def __init__(self):&quot;&quot;重写__init__，不再调用self._A__private&quot;&quot;
-        self.__private()
-        self.public()
-    def __private(self):
-        print(&quot;C.__private()&quot;)
-    def public(self):
-        print(&quot;C.public()&quot;) 
-
-&gt;&gt;&gt;c=C()
-C.__private()
-C.public()   
-</code></pre>
       
     </div>
 
@@ -526,8 +418,8 @@ C.public()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/01/learning google news-07.06.01/" rel="next" title="learning google news 17.06.01">
-                <i class="fa fa-chevron-left"></i> learning google news 17.06.01
+              <a href="/2018/01/22/Python english/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -535,10 +427,6 @@ C.public()
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/17/wake up 1/" rel="prev" title="wake up 1">
-                wake up 1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -674,7 +562,7 @@ C.public()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#property"><span class="nav-number">1.</span> <span class="nav-text">@property</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#property属性之一"><span class="nav-number">1.0.1.</span> <span class="nav-text">@property属性之一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#property属性之二"><span class="nav-number">1.0.2.</span> <span class="nav-text">@property属性之二</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TIPS"><span class="nav-number">2.</span> <span class="nav-text">TIPS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#StringIO-and-ByteIO"><span class="nav-number">1.</span> <span class="nav-text">StringIO and ByteIO</span></a></li></ol></div>
             
 
           </div>
