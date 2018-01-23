@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-23T12:36:42.367Z</updated>
+  <updated>2018-01-23T12:39:56.816Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,12 @@
     <link href="http://yoursite.com/2018/01/23/Python%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95/"/>
     <id>http://yoursite.com/2018/01/23/Python操作文件和目录/</id>
     <published>2018-01-23T12:35:50.000Z</published>
-    <updated>2018-01-23T12:36:42.367Z</updated>
+    <updated>2018-01-23T12:39:56.816Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Python操作文件和目录"><a href="#Python操作文件和目录" class="headerlink" title="Python操作文件和目录"></a>Python操作文件和目录</h1><p>完成廖雪峰老师在<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431925324119bac1bc7979664b4fa9843c0e5fcdcf1e000?t=1516710368739#0" target="_blank" rel="external">操作文件和目录一节</a>留下的作业:</p>
+<blockquote>
+<p>编写一个程序，能在当前目录以及当前目录的所有子目录下查找文件名包含指定字符串的文件，并打印出相对路径。</p>
+</blockquote>
 <pre><code># -*- coding: utf-8 -*-  
 import os
 import re
